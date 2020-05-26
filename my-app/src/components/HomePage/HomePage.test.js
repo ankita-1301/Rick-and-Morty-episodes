@@ -1,7 +1,6 @@
 import React from "react";
 import Enzyme, { shallow } from "enzyme";
 import HomePage from "./HomePage";
-import renderer from "react-test-renderer";
 import Adapter from "enzyme-adapter-react-16";
 
 Enzyme.configure({ adapter: new Adapter() });

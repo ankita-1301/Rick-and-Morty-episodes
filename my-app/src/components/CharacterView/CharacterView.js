@@ -132,18 +132,18 @@ export default class CharacterView extends React.Component {
           })}
         </Card>
         <Card title="Recommended Episodes">
-          {relevantRecommends.map((data) => {
+          {relevantRecommends.map((relevantRecc) => {
             return (
               <Link
                 to={{
-                  pathname: `/episodes/episode/${data.id}`,
-                  state: { data: data },
+                  pathname: `/episodes/episode/${relevantRecc.id}`,
+                  state: { data: relevantRecc },
                 }}
-                key={data.id}
+                key={relevantRecc.id}
               >
-                <Card.Grid style={gridStyle} key={data.id}>
-                  <h1>{data.episode}</h1>
-                  <h3>{data.name}</h3>
+                <Card.Grid style={gridStyle} key={relevantRecc.id}>
+                  <h1>{relevantRecc.episode}</h1>
+                  <h3>{relevantRecc.name}</h3>
                 </Card.Grid>
               </Link>
             );
