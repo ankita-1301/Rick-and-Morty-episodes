@@ -38,7 +38,7 @@ const state = {
 
 const props = {};
 
-test("Characters component snapshot", () => {
+test("CharacterView component snapshot", () => {
   const characterView = renderer.create(
     <CharacterView {...props} location={state} />
   );
@@ -46,14 +46,14 @@ test("Characters component snapshot", () => {
   expect(charTree).toMatchSnapshot();
 });
 
-describe("Test characters component", () => {
+describe("Test character view component", () => {
   describe("Has rendered with mock props", () => {
     let component;
     beforeEach(() => {
       component = shallow(<CharacterView {...props} location={state} />);
     });
 
-    it("Renders characters without error", () => {
+    it("Renders character view without error", () => {
       expect(component.length).toBe(1);
     });
   });

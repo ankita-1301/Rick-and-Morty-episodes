@@ -27,7 +27,7 @@ const state = {
 
 const props = {};
 
-test("Episodes component snapshot", () => {
+test("EpisodeView component snapshot", () => {
   const episodeView = renderer.create(
     <EpisodeView {...props} location={state} />
   );
@@ -35,14 +35,14 @@ test("Episodes component snapshot", () => {
   expect(epiTree).toMatchSnapshot();
 });
 
-describe("Test episodes component", () => {
+describe("Test episode view component", () => {
   describe("Has rendered with mock props", () => {
     let component;
     beforeEach(() => {
       component = shallow(<EpisodeView {...props} location={state} />);
     });
 
-    it("Renders episodes without error", () => {
+    it("Renders episode view without error", () => {
       expect(component.length).toBe(1);
     });
   });
