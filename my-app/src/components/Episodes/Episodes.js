@@ -14,6 +14,7 @@ export default class Episodes extends React.Component {
       next: 0, //counter if nextPage exists for all episodes
     };
   }
+
   componentDidMount() {
     this.fetchAllEpisodes();
   }

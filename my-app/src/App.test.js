@@ -6,6 +6,8 @@ import Adapter from "enzyme-adapter-react-16";
 
 Enzyme.configure({ adapter: new Adapter() });
 
+//test setup for app component
+
 const findByAttri = (component, attri) => {
   const wrapper = component.find(`[data-test="${attri}"]`);
   return wrapper;

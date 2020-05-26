@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Characters component snapshot 1`] = `
+<div
+  data-test="characterView-div"
+>
+  <h1>
+    Morty Smith
+  </h1>
+  <span
+    className="ant-avatar character-avatar ant-avatar-square ant-avatar-image ant-avatar-icon"
+    style={
+      Object {
+        "fontSize": 100,
+        "height": 200,
+        "lineHeight": "200px",
+        "width": 200,
+      }
+    }
+  >
+    <img
+      onError={[Function]}
+      src="https://rickandmortyapi.com/api/character/avatar/2.jpeg"
+    />
+  </span>
+  <h5>
+     Status : 
+    Alive
+  </h5>
+  <h5>
+     Species : 
+    Human
+  </h5>
+  <h5>
+     Gender : 
+    Male
+  </h5>
+  <h5>
+     Type : 
+    
+  </h5>
+  <div
+    className="ant-card episode-view-card ant-card-bordered"
+    data-test="charView-episode"
+  >
+    <div
+      className="ant-card-head"
+      style={Object {}}
+    >
+      <div
+        className="ant-card-head-wrapper"
+      >
+        <div
+          className="ant-card-head-title"
+        >
+          Episodes
+        </div>
+      </div>
+    </div>
+    <div
+      className="ant-card-body"
+      style={Object {}}
+    />
+  </div>
+  <div
+    className="ant-card ant-card-bordered"
+  >
+    <div
+      className="ant-card-head"
+      style={Object {}}
+    >
+      <div
+        className="ant-card-head-wrapper"
+      >
+        <div
+          className="ant-card-head-title"
+        >
+          Recommended Episodes
+        </div>
+      </div>
+    </div>
+    <div
+      className="ant-card-body"
+      style={Object {}}
+    />
+  </div>
+</div>
+`;

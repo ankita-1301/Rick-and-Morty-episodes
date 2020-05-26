@@ -6,6 +6,8 @@ import Adapter from "enzyme-adapter-react-16";
 
 Enzyme.configure({ adapter: new Adapter() });
 
+//test setup for episodeView component
+
 const state = {
   state: {
     data: {

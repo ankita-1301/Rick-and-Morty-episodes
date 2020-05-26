@@ -6,6 +6,8 @@ import Adapter from "enzyme-adapter-react-16";
 
 Enzyme.configure({ adapter: new Adapter() });
 
+//test setup for characters component
+
 test("Characters component snapshot", () => {
   const characters = renderer.create(<Characters />);
   let charTree = characters.toJSON();

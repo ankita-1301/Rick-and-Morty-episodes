@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Episodes component snapshot 1`] = `
+<div>
+  <div
+    className="ant-card ant-card-bordered"
+    data-test="episodes-card"
+  >
+    <div
+      className="ant-card-head"
+      style={Object {}}
+    >
+      <div
+        className="ant-card-head-wrapper"
+      >
+        <div
+          className="ant-card-head-title"
+        >
+          All episodes of Ricky and Morty
+        </div>
+      </div>
+    </div>
+    <div
+      className="ant-card-body"
+      style={Object {}}
+    />
+  </div>
+</div>
+`;
