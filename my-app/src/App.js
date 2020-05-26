@@ -1,33 +1,45 @@
 import React from "react";
-import Navigation from "./components/Navigation";
-import HomePage from "./components/HomePage";
+import Navigation from "./components/Navigation/Navigation";
+import HomePage from "./components/HomePage/HomePage";
+import Characters from "./components/Characters/Characters";
+import CharacterView from "./components/CharacterView/CharacterView";
+import EpisodeView from "./components/EpisodeView/EpisodeView";
+import Episodes from "./components/Episodes/Episodes";
+import "./styles.css";
 import { Route } from "react-router";
-import { Layout } from "antd"; //Using Ant Design for UI
+import { Layout } from "antd";
 
 const { Header, Content, Footer } = Layout;
 
 export default class App extends React.Component {
   render() {
     return (
-      <div>
+      <div data-test="app-div">
         <Layout className="layout">
           <Header>
             <div className="logo" />
-            <Navigation /> {/* Rendering Navigation Component */}
+            <Navigation />
           </Header>
-          <Content style={{ padding: "0 50px" }}>
-            <div
-              style={{
-                background: "#fff",
-                padding: 24,
-                minHeight: "100em",
-              }}
-            >
+          <Content>
+            <div className="home-page">
               <Route exact path="/" component={HomePage} />
-              {/* Rendering HomePage Component */}
+              <Route exact path="/characters" component={Characters} />
+              <Route
+                exact
+                name="characterView"
+                path="/characters/character/:Id"
+                component={CharacterView}
+              />
+              <Route exact path="/episodes" component={Episodes} />
+              <Route
+                exact
+                name="episodeView"
+                path="/episodes/episode/:Id"
+                component={EpisodeView}
+              />
             </div>
           </Content>
-          <Footer style={{ textAlign: "center" }}>Footer text here</Footer>
+          <Footer className="footer">Footer text here</Footer>
         </Layout>
       </div>
     );
