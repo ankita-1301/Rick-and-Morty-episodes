@@ -1,6 +1,6 @@
 import React from "react";
 import Enzyme, { shallow } from "enzyme";
-import App from "./App";
+import HomePage from "./HomePage";
 import renderer from "react-test-renderer";
 import Adapter from "enzyme-adapter-react-16";
 
@@ -12,20 +12,22 @@ const findByAttri = (component, attri) => {
 };
 
 const setUp = (props = {}) => {
-  const component = shallow(<App {...props} />);
+  const component = shallow(<HomePage {...props} />);
   return component;
 };
 
-describe("Test app component", () => {
+describe("Test HomePage component", () => {
   describe("Has prop title", () => {
     let wrapper;
     beforeEach(() => {
-      const props = {};
+      const props = {
+        title: "Welcome to Rick and Morty show",
+      };
       wrapper = setUp(props);
     });
 
-    it("Renders app without error", () => {
-      const component = findByAttri(wrapper, `app-div`);
+    it("Renders HomePage without error", () => {
+      const component = findByAttri(wrapper, `homepage-header`);
       expect(component.length).toBe(1);
     });
   });
