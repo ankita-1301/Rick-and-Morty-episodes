@@ -5,6 +5,7 @@ import { Card, Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
+//Component for rendering single character
 export default class CharacterView extends React.Component {
   constructor(props) {
     super(props);
@@ -17,17 +18,18 @@ export default class CharacterView extends React.Component {
   }
 
   componentDidMount() {
-    this.fetchCharacter();
+    this.fetchEpisodes();
     this.fetchRecommendations();
   }
 
-  fetchCharacter = () => {
+  //fetching all the episodes that the character belongs to
+  fetchEpisodes = () => {
     const {
       location: {
         state: { data },
       },
     } = this.props;
-    data.episode.map((episodePage) => {
+    data.episode.forEach((episodePage) => {
       fetch(`${episodePage}`)
         .then((response) => response.json())
         .then((eachEpisode) => {
@@ -39,6 +41,7 @@ export default class CharacterView extends React.Component {
     });
   };
 
+  //fetching episode(s) recommendations of the same species
   fetchRecommendations = () => {
     const {
       location: {
@@ -51,8 +54,8 @@ export default class CharacterView extends React.Component {
     fetch(`https://rickandmortyapi.com/api/character/?species=${species}`)
       .then((response) => response.json())
       .then(({ results }) => {
-        results.map((character) => {
-          character.episode.map((eachEpisode) => {
+        results.forEach((character) => {
+          character.episode.forEach((eachEpisode) => {
             fetch(`${eachEpisode}`)
               .then((response) => response.json())
               .then((episodeData) => {
@@ -80,10 +83,10 @@ export default class CharacterView extends React.Component {
 
     //remove duplicates in recommended episodes
     let relevantRecommends = Array.from(
-      new Set(recommendations.map((a) => a.id))
+      new Set(recommendations.map((a) => a.id)) //all IDs
     )
-      .map((id) => recommendations.find((a) => a.id === id))
-      .filter((o) => !episodes.find((o2) => o.id === o2.id));
+      .map((id) => recommendations.find((a) => a.id === id)) //duplicate IDs
+      .filter((o) => !episodes.find((o2) => o.id === o2.id)); //filtering IDs
 
     const gridStyle = {
       width: "25%",

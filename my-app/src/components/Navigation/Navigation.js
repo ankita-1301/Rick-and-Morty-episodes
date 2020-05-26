@@ -4,6 +4,7 @@ import "antd/dist/antd.css";
 import { Menu } from "antd";
 import { NavLink } from "react-router-dom";
 
+//navigation component common across the pages
 export default class Navigation extends React.Component {
   render() {
     return (

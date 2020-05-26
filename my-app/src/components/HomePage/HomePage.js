@@ -3,6 +3,7 @@ import "antd/dist/antd.css";
 import "../../styles.css";
 import { PageHeader, Carousel } from "antd";
 
+//Component for home page rendering carousel of images
 export default class HomePage extends React.Component {
   render() {
     return (

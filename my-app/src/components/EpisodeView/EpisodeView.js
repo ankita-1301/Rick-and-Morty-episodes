@@ -5,9 +5,10 @@ import { Card, Avatar } from "antd";
 import { UserOutlined } from "@ant-design/icons";
 import { Link } from "react-router-dom";
 
+//Component for rendering single episode
 export default class EpisodeView extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       characters: [],
     };
@@ -17,13 +18,14 @@ export default class EpisodeView extends React.Component {
     this.fetchCharacters();
   }
 
+  //fetching all the characters that the episode contains
   fetchCharacters = () => {
     const {
       location: {
         state: { data },
       },
     } = this.props;
-    data.characters.map((characterPage) => {
+    data.characters.forEach((characterPage) => {
       fetch(`${characterPage}`)
         .then((response) => response.json())
         .then((eachCharacter) => {
