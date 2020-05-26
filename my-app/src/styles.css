@@ -19,3 +19,66 @@
   text-align: left;
   float: left;
 }
+
+.site-card-wrapper {
+  background: #ececec;
+  padding: 10px;
+}
+
+.site-page-header {
+  border: 1px solid rgb(235, 237, 240);
+}
+
+.ant-layout-content {
+  padding: 0 50px;
+}
+
+.home-page {
+  background: #fff;
+  padding: 24px;
+  min-height: 100em;
+}
+
+.footer {
+  text-align: center;
+}
+
+.grid-style {
+  width: 25%;
+  text-align: center;
+}
+
+.load-more-button {
+  margin: 10px;
+  float: right;
+}
+
+.character-avatar {
+  margin-top: 10px;
+}
+
+.character-view-card {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.character-view-grid.style {
+  width: 25%;
+  text-align: center;
+  height: 100px;
+}
+
+.episode-view-grid.style {
+  width: 25% !important;
+  text-align: center !important;
+  height: 100px !important;
+}
+
+.episode-view-card {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+
+.nav-menu {
+  line-height: 64px;
+}
