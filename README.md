@@ -31,7 +31,8 @@ Launches the test runner in the interactive watch mode.
 
 ## Demo
 
-<a href="https://imgflip.com/gif/42vspq" src="https://imgflip.com/embed/42vspq">via Imgflip</a>
+![demogif](https://user-images.githubusercontent.com/27355514/82921611-dbc16d00-9f78-11ea-83bb-ae293f91d200.gif)
+
 
 ## Components
 
